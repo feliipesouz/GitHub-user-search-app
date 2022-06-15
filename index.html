@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@1,300&family=Outfit:wght@300;400;600&family=Red+Hat+Text:wght@700&family=Space+Mono&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png" />
+  <title>GitHub user search app</title>
+</head>
+
+<body>
+  <header>
+    <div class="headName">devfinder</div>
+    <div class="light-dark mode">
+      <button class="color-mode__btn light--hidden" aria-label="Toggle light mode">
+        LIGHT
+        <img src="./assets/icon-sun.svg" alt="image sun" />
+      </button>
+
+      <button class="color-mode__btn dark--hidden" aria-label="Toggle dark mode">
+        DARK
+        <img src="./assets/icon-moon.svg" alt="image moon" />
+      </button>
+    </div>
+  </header>
+
+  <section class="search">
+    <div class="searchText">
+      <img src="./assets/icon-search.svg" alt="pesquisar">
+      <input type="text" placeholder="Search GitHub username...">
+    </div>
+    <button type="button" class="searchbtn" onClick="action()">Search</button>
+  </section>
+
+  <section class="body">
+    <div>
+      <div class="headGit">
+        <div class="authorImg"></div>
+        <div class="infoGit">
+          <div class="infoDados">
+            <div class="userGit">The Octocat</div>
+            <div class="userNameGit">@Octocat</div>
+          </div>
+          <div class="joinedDateGit">Joined 25 Jan 2011</div>
+        </div>
+      </div>
+
+      <div class="githubFact">
+        <div class="githubBio">This profile has no bio</div>
+
+        <div class="githubRepo">
+          <div class="repos">
+            <div class="repoHeading" id="repoBox">Repos</div>
+            <div class="repoTotal" id="repoValue">0</div>
+          </div>
+          <div class="followers">
+            <div class="followerHeading" id="repoBox">Followers</div>
+            <div class="followerTotal" id="repoValue">0</div>
+          </div>
+          <div class="following">
+            <div class="followingHeading" id="repoBox">Following</div>
+            <div class="followingTotal" id="repoValue">0</div>
+          </div>
+        </div>
+
+        <div class="gitNetworks">
+          <div class="location" id="networks">
+            <img src="assets/icon-location.svg" alt="" />
+            <p class="locations">Location</p>
+          </div>
+          <div class="twitter" id="networks">
+            <img src="assets/icon-twitter.svg" alt="" />
+            <p class="twit">Twitter</p>
+          </div>
+          <div class="website" id="networks">
+            <img src="assets/icon-website.svg" alt="" />
+            <p class="websites">Website</p>
+          </div>
+          <div class="company" id="networks">
+            <img src="assets/icon-company.svg" alt="" />
+            <p class="companies">Company</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
