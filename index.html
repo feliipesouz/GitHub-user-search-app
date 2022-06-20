@@ -17,21 +17,14 @@
   <header>
     <div class="headName">devfinder</div>
     <div class="light-dark mode">
-      <button class="color-mode__btn light--hidden" aria-label="Toggle light mode">
-        LIGHT
-        <img src="./assets/icon-sun.svg" alt="image sun" />
-      </button>
-
-      <button class="color-mode__btn dark--hidden" aria-label="Toggle dark mode">
-        DARK
-        <img src="./assets/icon-moon.svg" alt="image moon" />
+      <button class="color-mode__btn dark--hidden" id="button" aria-label="Toggle dark mode" onclick='{toggleTheme()}'>LIGHT<img src="./assets/icon-sun.svg" alt="image sun" />
       </button>
     </div>
   </header>
 
   <section class="search">
     <div class="searchText">
-      <img src="./assets/icon-search.svg" alt="pesquisar">
+      <img src="./assets/icon-search.svg" alt="search">
       <input type="text" placeholder="Search GitHub username...">
     </div>
     <button type="button" class="searchbtn" onClick="action()">Search</button>
@@ -43,47 +36,47 @@
         <div class="authorImg"></div>
         <div class="infoGit">
           <div class="infoDados">
-            <div class="userGit">The Octocat</div>
-            <div class="userNameGit">@Octocat</div>
+            <div class="userGit changeContent" id='name'>The Octocat</div>
+            <div class="userNameGit changeContent" id='login'>@Octocat</div>
           </div>
-          <div class="joinedDateGit">Joined 25 Jan 2011</div>
+          <div class="joinedDateGit changeContent">Joined 25 Jan 2011</div>
         </div>
       </div>
 
       <div class="githubFact">
-        <div class="githubBio">This profile has no bio</div>
+        <div class="githubBio changeContent" id="bio">This profile has no bio</div>
 
         <div class="githubRepo">
           <div class="repos">
             <div class="repoHeading" id="repoBox">Repos</div>
-            <div class="repoTotal" id="repoValue">0</div>
+            <div class="repoValue changeContent" id="public_repos">0</div>
           </div>
           <div class="followers">
             <div class="followerHeading" id="repoBox">Followers</div>
-            <div class="followerTotal" id="repoValue">0</div>
+            <div class="repoValue changeContent" id="followers">0</div>
           </div>
           <div class="following">
             <div class="followingHeading" id="repoBox">Following</div>
-            <div class="followingTotal" id="repoValue">0</div>
+            <div class="repoValue changeContent" id="following">0</div>
           </div>
         </div>
 
         <div class="gitNetworks">
-          <div class="location" id="networks">
-            <img src="assets/icon-location.svg" alt="" />
-            <p class="locations">Location</p>
+          <div class="location networks">
+            <img src="assets/icon-location.svg" alt="imageLocation" />
+            <p class="locations changeContent" id="location">Location</p>
           </div>
-          <div class="twitter" id="networks">
-            <img src="assets/icon-twitter.svg" alt="" />
-            <p class="twit">Twitter</p>
+          <div class="twitter networks">
+            <img src="assets/icon-twitter.svg" alt="imageTwitter" />
+            <p class="twit changeContent" id="twitter_username">Twitter</p>
           </div>
-          <div class="website" id="networks">
-            <img src="assets/icon-website.svg" alt="" />
-            <p class="websites">Website</p>
+          <div class="website networks">
+            <img src="assets/icon-website.svg" alt="imageWebsite" />
+            <p class="websites changeContent" id="blog">Website</p>
           </div>
-          <div class="company" id="networks">
-            <img src="assets/icon-company.svg" alt="" />
-            <p class="companies">Company</p>
+          <div class="company networks">
+            <img src="assets/icon-company.svg" alt="imageCompany" />
+            <p class="companies changeContent" id="company">Company</p>
           </div>
         </div>
       </div>

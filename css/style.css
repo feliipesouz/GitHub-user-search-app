@@ -3,8 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* font, butão no enter e alinhamento redes sociais*/
 
-:root[color-mode='light'] {
+:root {
   --body-bg-color-: #f6f8ff;
   --head-color-: #222731;
   --darklight-color-: #697c9a;
@@ -16,7 +17,7 @@
 }
 
 /* Dark Mode */
-:root[color-mode='dark'] {
+.dark-mode:root {
   --body-bg-color-: #141d2f;
   --head-color-: #ffffff;
   --darklight-color-: #ffffff;
@@ -30,8 +31,7 @@
 }
 
 body {
-  background-color: #f6f8ff;
-  /* background-color: var(--body-bg-color-); */
+  background-color: var(--body-bg-color-);
   width: 100%;
   height: 100vh;
   display: flex;
@@ -84,8 +84,7 @@ header {
 .search {
   height: 69px;
   width: 730px;
-  background-color: white;
-  /* background-color: var(--search-bg-color-); */
+  background-color: var(--search-bg-color-);
   border-radius: 15px;
   display: flex;
   align-items: center;
@@ -109,12 +108,12 @@ header {
   border: none;
   outline: none;
   font-size: 18px;
-  color: #4b6a9b;
-  background-color: white;
+  color: var(--search-color-);
+  background-color: var(--search-bg-color-);
 }
 
 ::placeholder {
-  color: #4b6a9b;
+  color: var(--search-color-);
   opacity: 1;
 }
 
@@ -134,7 +133,7 @@ header {
 }
 
 .body {
-  background-color: white;
+  background-color: var(--search-bg-color-);
   width: 730px;
   height: 419px; /*Isso ou setar mb na última div?*/
   border-radius: 15px;
@@ -153,7 +152,7 @@ header {
 }
 
 .authorImg {
-  border: 1px solid #849cbd;
+  /* border: 1px solid var(--black); */
   width: 117px;
   height: 117px;
   border-radius: 117px;
@@ -183,13 +182,13 @@ header {
 .userGit {
   font-size: 26px;
   font-weight: bold;
-  color: #2b3442;
+  color: var(--followTotal-color-);
 }
 
 .joinedDateGit {
   padding-top: 6px;
   font-size: 15px;
-  color: #697c9a;
+  color: var(--darklight-color-);
 }
 
 .userNameGit {
@@ -213,7 +212,7 @@ header {
 .githubBio {
   width: 480px;
   height: 25px;
-  color: #4b6a9b;
+  color: var(--search-color-);
   margin-top: -12px;
   margin-bottom: 30px;
 }
@@ -222,7 +221,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  background-color: #f6f8ff;
+  background-color: var(--body-bg-color-);
   height: 85px;
   width: 480px;
   border-radius: 10px;
@@ -230,31 +229,31 @@ header {
 
 #repoBox {
   font-size: 13px;
-  color: #4b6a9b;
+  color: var(--follow-color-);
 }
 
-#repoValue {
+.repoValue {
   font-weight: bold;
   font-size: 22px;
-  color: #2b3442;
+  color: var(--followTotal-color-);
 }
 
 .gitNetworks {
   display: grid;
   grid-template-columns: 270px 200px;
   row-gap: 1.2em;
-  color: white;
+  color: var(--social-color-);
   margin-top: 30px;
 }
 
 .gitNetworks div {
   display: flex;
   align-items: center;
-  color: #4b6a9b;
+  color: var(--follow-color-);
   font-size: 15px;
 }
 
-#networks img {
+.networks img {
   color: #849cbd;
   margin-right: 10px;
 }
@@ -366,12 +365,19 @@ header {
     width: 100%;
   }
 
+  .repoValue {
+    text-align: center;
+    margin-top: 6px;
+  }
+
   .gitNetworks {
     grid-template-columns: 279px;
   }
 
-  #repoValue {
-    text-align: center;
-    margin-top: 6px;
+  .networks p {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+    margin-left: 5px;
   }
 }
